@@ -166,20 +166,29 @@ const htmlTemplate = `<!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Unicode Character Search</title>
+	<title>&#x2692; - U+ --</title>
 	<style>
-		body { font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; color: #222; }
-		input { width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans');
+	 	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+
+		body { font-family: "Noto Sans", "Noto Color Emoji"; max-width: 72rem; margin: 2rem auto; padding: 0 1rem; background-color: #111; color: #eee; }
+		input { width: 100%; padding: 12px; font-size: 16px; border: 2px solid #ccc; border-radius: 6px; box-sizing: border-box; background-color: #7772; color: #ddd; }
 		input:focus { outline: none; border-color: #0066cc; }
 		table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
 		th, td { text-align: left; padding: 10px; border-bottom: 1px solid #eee; }
 		.glyph { font-size: 1.6rem; text-align: center; width: 60px; }
-		.code { font-family: monospace; color: #555; width: 100px; }
+		.code { font-family: monospace; color: #777; width: 100px; }
 		.cat { font-family: monospace; color: #888; width: 60px; }
+
+		@media (prefers-color-scheme: light) {
+			body { background-color: #eee; color: #111; }
+			input { border-color: #ccc; color: #333; }
+		}
 	</style>
 </head>
 <body>
-	<h1>Unicode Character Search &#x1F9D4;&#x1cdf;</h1>
+	<h1>U+ - &#x1F9D4;&#x1cdf; --&#x1cdf;&#x1F9D4;</h1>
 	<input type="text" id="search" placeholder="Search by name or code point (e.g., SNOWMAN, ARROW, U+1F600)..." autofocus>
 	<table>
 		<thead>

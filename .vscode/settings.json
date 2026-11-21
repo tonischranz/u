@@ -1,0 +1,5 @@
+{
+  "go.alternateTools": {
+    "go": "/usr/lib/go-1.25/bin/go"
+  }
+}
